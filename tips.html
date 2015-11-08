@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>15 Minute Lecture: Tips, tricks, and on-liners</title>
+<style type="text/css" media="screen">
+<!--
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000;
+}
+body {
+	background-color: #FFF;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+
+-->
+</style>
+</head>
+<body>
+<strong>Staying organized:</strong>
+<ul>
+<li>Put a README files in each directory.</li>
+<li>Use (a ridiculous amount of) physical and digital post-it notes.</li>
+<li>Keep a research notebook.  It helps you track your work over time, keep a record of all calibration/reduction/programming steps, serve as a reference place to track down that comment your adviser made a year ago that you wrote down and then forgot, and helps you work out your research ideas --- all in one little package.  Your "notebook" can be a physical book, a folder with sheets of paper, a computer file, an HTML file --- the means doesn't matter as long as you are detailed and consistent.</li>
+<li>Keep track of deadlines and events with Google Calendar.</li>
+</ul>
+
+<strong>Managing references:</strong>
+<ul>
+<li>Use the NASA/ADS <a href="http://adsabs.harvard.edu/bib_abs.html">Journal/Volume/Page Query Form</a>   to search using a reference as printed in a paper bibliography.</li>
+<li>Use the <a href="http://adsabs.harvard.edu/cgi-bin/nph-manage_account?man_cmd=login&amp;man_url=http://adsabs.harvard.edu/cgi-bin/myads_set">NASA/ADS private library</a> to keep track of your references.</li>
+<li>The <a href="http://www.mendeley.com/">Mendeley Desktop</a> helps you organize, tag, comment on, and search your references. You can synchronize your collection online and offline, allowing you to peruse articles without an internet connection.</li>
+<li>The Harvard Bibtex style takes the irritation out of a bibliography, and this style formats your references as (Last name, Year). In your Latex file put the following two lines right before the \end{document} line:<br />
+\bibliography{myrefs} \bibliographystyle{elsart-harv}<br />
+At the bottom of every NASA/ADS listing is a link "Bibtex entry for this abstract", which gives you the Bibtek-formatted info for that particular listing. The myrefs.bib file can have entries for every paper you've ever read, and Bibtex will only list the references you use in your paper with 
+\citet{} and \citep{} commands. <a href="http://ads.harvard.edu/pubs/bibtex/astronat/doc/html/astronat_1.html">AstroNat</a> has useful Latex, Bibtex, and Perl software to allow the use of BibTeX to organize bibliographies when writing articles for Astronomy journals.
+</li>
+<li>I always use the shortcut name in my Bibtek file when I mention a reference, even if it's  only  in a note to myself or an outline. That way I don't have to look through my bib file to check what nickname I used for the reference.</li>
+</ul>
+
+<strong>Handy computer tricks:</strong>
+<ul>
+<li>When I have to work in several directories at once, I open several shells in the terminal I'm working in. This way I can do something in one shell, press alt-arrow to get to another shell/directory and continue working. You could also open up several terminals but I like to use many tabs rather than many windows.</li>
+<li>I write shell scripts to do things that I do constantly, like backing up files or making LaTex documents. The only two requirements are the shell line at the top (for example #/bin/cshrc!) and making the file executable with chmod.  These are usually two- or three-liner codes like a series of search and replaces to get filenames (from a simple ls) in the right format to run, or a compile-and-scp-files command.</li>
+<li>If I have to run a code many times for many different files, I create an executable  file with the commands I want to run.<br />
+<li>Using aliases in your shell file:
+<div style="margin-left:20px;">
+Alias l, la and ll to ls, ls -a and ls -l, respectively.<br />
+Alias  specific version of python needed for matplotlib.<br />
+Alias misspellings of common commands (like emas, emcas, emcs, etc.) to the properly-spelled command (emacs).<br />
+Alias commonly-used scp addresses and directory paths.</div></li>
+</ul>
+
+<strong>UNIX one-liners:</strong>
+<ul>
+<li><strong>du -h</strong> to check out hard disk space in convenient-to-read units</li>
+<li><strong>rsync -arvz --progress --delete path_backup_from path_backup_to</strong> is handy for backups</li>
+<li><strong>sort fileName | uniq -w number</strong> 
+  gets all the unique lines in a file based off of the first number of characters, useful if you have names of stars and lots of observations of them, and you want to know just how many stars there are in a directory</li>
+<li><strong>find ./ -name filename</strong> returns path info for string matching 'filename'. It takes wildcards also.  It's like ls -R | grep filename  but better.</li>
+<li><strong>head filename</strong> and <strong>tail filename</strong> is a quick way to view the beginning or end of a file, respectively.</li>
+<li><strong>ls -ld */</strong> lists all subdirectories</li>
+<li><strong>sed -i 's/bluh1/bluh2/g' *.dat</strong> is a simple search and replace of all instances of bluh1 by bluh2 in files *.dat</li>
+<li><strong>rename .dat .txt ?mag.dat</strong> batch file renaming</li>
+</ul>
+</body>
+</html>

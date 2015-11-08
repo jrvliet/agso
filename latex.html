@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NMSU Astronomy Graduate Student Organization</title>
+<script type="text/javascript" src="nifty.js"></script>
+<link rel="stylesheet" href="agso_style.css" type="text/css" />
+</head>
+<body>
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td height="84" width="85" valign="top"><img src="images/nmsulogo.gif" width="85" height="84" style="display:block;" border=0 /></td>
+<td width="815" height="84" colspan="4" align="left" valign="bottom" background="images/bluefill.gif"><a href="index.html"><img src="images/agso_constellations_top.gif" width=815 height=84 style="display:block;" border=0 /></a></td>
+<td height="84" background="images/bluefill.gif"></td>
+</tr>
+<tr>
+<td height="60" width="85" rowspan="2" valign="top" background="images/goldfill.gif" align="left"><img src="images/nmsulogo_bottom.gif" width="85" height="12" style="display:block" /></td>
+<td width="110" height="30" align="center" background="images/goldfill.gif"><a href="index.html" class="menu">About Us</a></td>
+<td width="110" height="30" align="center" background="images/goldfill.gif"><a href="nmnmsu.html" class="menu">NM &amp; NMSU</a></td>
+<td width="130" height="30" align="center" background="images/goldfill.gif"><a href="teachout.html" class="menu">Teaching &amp; Outreach</a></td>
+<td width="130" height="30" align="center" background="images/maroonfill.gif"><font color="#ffffff">Computer &amp; Interwebs</font></td>
+<td height="30" colspan="2" background="images/goldfill.gif"></td>
+</tr>
+<tr>
+<td colspan="4" height="30" background="images/maroonfill.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="compweb.html" class="submenu-off">Computers, Printers, &amp; Copier</a> &nbsp;&nbsp;&nbsp; <img src="images/asterisk.gif" width="13" height="12" align="absmiddle" /> &nbsp;&nbsp;&nbsp; <font color="#ffffff">LaTeX</font> &nbsp;&nbsp;&nbsp; <img src="images/asterisk.gif" width="13" height="12" align="absmiddle" /> &nbsp;&nbsp;&nbsp; <a href="interwebs.html" class="submenu-off">Webspace &amp; Websites</a></td>
+<td height="30" background="images/goldfill.gif"></td>
+</tr>
+</table>
+<div style="margin-left: 10px; margin-right:10px;"><br />
+Love it or hate it, LaTeX is the standard typesetting language of the astronomical world.
+<br clear="all" />
+<table align="left" border=0 cellpadding="10">
+<tr>
+<td><strong>Contents</strong>:
+<ul>
+<a href="#symbols">Symbols</a><br />
+<a href="#dashes">Dashes</a><br />
+<a href="#bib">Bibliography</a><br />
+</ul>
+</td>
+<td valign="top"><img src="images/latex.gif" width="242" height="99" /></td>
+</tr>
+</table>
+<br clear="all" />
+<a name="symbols" id="symbols"></a>
+<h3>Symbols</h3>
+<div style="margin-left:20px;">
+<p>You'll go mad without a master list of <a href="http://www.math.toronto.edu/mathit/symbols-letter.pdf">LaTeX codes for symbols and letters</a> (or the awesome drawing recognition webpage <a href="http://detexify.kirelabs.org/classify.html">Detexify<sup>2</sup></a>). If you're using microns (or other microunits), you'll want a mu that isn't italicized. For this you'll need to usepackage{upgreek}. Then, an upright mu will be \upmu. Primes and double primes (for arcminutes and arcseconds) are simply ' and '' in math mode.
+</p>
+</div>
+<a name="dashes" id="dashes"></a>
+<h3>Dashes</h3>
+<div style="margin-left:20px;">
+LaTeX has three dash lengths that you need care about:
+<div style="margin-left:20px;">
+<p>- A hyphen, used for hyphenated words. </p>
+<p>-- An en-dash, which is the same width as a lowercase 'n'. Used for numerical ranges. </p>
+<p>--- An em-dash, which is the same width as a lowercase 'm'. Used for sidetracks in text. </p>
+Example:<br />
+On 16--24 Jun 2009 we obtained high-quality spectra from 450--860 nm of the Doomsday Asteroid. If our back-of-the-envelope calculations are correct---and they always are---then it would be best to avoid the Seattle-Tacoma area from October--December 2012. If you can't get out of there---maybe the traffic is too rough or something---then you may be interested in Chapters 7--9 of \citet{apocalypse_guide}.
+</div>
+</div>
+<a name="bib" id="bib"></a>
+<h3>Bibliography</h3>
+<div style="margin-left:20px;">
+<p>Using <a href="http://www.elsevier.com/wps/find/authorsview.authors/elsart#bibtex">BibTeX</a> to manage your references is a real time-saver.
+  It allows you to keep a separate (occasionally massive) file of references rather than continually updating the bibliography section of your paper. When you compile your file, only references cited in the paper will be included in the bibliography. How does this work? A brief intro is given here, but you can check out the longer explanation with <a href="http://ads.harvard.edu/pubs/bibtex/astronat/doc/html/astronat_3.html">AstroNat</a>.</p>
+<p>Firstly, you will need to create a separate text file that will have all of your references in it, for instance redshift.bib. Perhaps you would like to cite Hubble's  lectures on his observations of the expanding universe. On the <a href="http://adsabs.harvard.edu/abs/1936rene.book.....H">NASA-ADS page</a> for the book of his lectures, below the abstract is a link &quot;<a href="http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1936rene.book.....H&amp;data_type=BIBTEX&amp;db_key=AST&amp;nocookieset=1">Bibtex entry for this abstract</a>&quot; that gives you the following information:
+</p>
+<p style="margin-left:20px;">
+@BOOK{1936rene.book.....H,<br />
+&nbsp;&nbsp;&nbsp;author = {{Hubble}, E.~P.},<br />
+&nbsp;&nbsp;&nbsp;title = "{Realm of the Nebulae}",<br />
+&nbsp;&nbsp;&nbsp;booktitle = {Realm of the Nebulae, by E.P.~Hubble.~ New Haven: Yale University Press, 1936.~ ISBN 9780300025002},<br />
+&nbsp;&nbsp;&nbsp;year = 1936,<br />
+&nbsp;&nbsp;&nbsp;editor = "{Hubble, E.~P.}",<br />
+&nbsp;&nbsp;&nbsp;adsurl = {http://adsabs.harvard.edu/abs/1936rene.book.....H},<br />
+&nbsp;&nbsp;&nbsp;adsnote = {Provided by the SAO/NASA Astrophysics Data System}<br />
+}
+</p>
+The first line contains the shortcut you'll use to include this reference, <strong>1936rene.book.....H.</strong> Since that's irritating to type, I tend to change them to something more recognizable, such as <strong>HubblesLaw</strong>. When you change the shortcut name, be careful not to delete the comma at the end. My altered shortcut line would now look like this:
+<p style="margin-left:20px;">
+@BOOK{HubblesLaw,
+</p>
+To include a citation to this article in your paper, you would type the following (or multiple shortcuts separated by commas):
+<ul>
+  <li>\citet{HubblesLaw} for an in-text citation</li>
+  <li>\citep{HubblesLaw} for a parenthetical citation</li>
+  <li>\nocite{HubblesLaw} to include the refence <em>only in your bibliography</em></li>
+</ul>
+<p>To tell LaTeX that you're using BibTex, you'll need to include two more lines in your document:</p>
+<ul>
+<li>specify your bibliography style before your \begin{document} tag, for instance with \bibliographystyle{apj} (and make sure you have the <a href="http://ads.harvard.edu/pubs/bibtex/astronat/apj/apj.bst">apj.bst</a> file in the same directory)</li>
+<li>instead of \begin{bibliography} ... \end{bibliography}, indicate which .bib file to use for your bibliography with \bibliography{redshift}</li>
+</ul>
+<p>To compile your file, you'll have to run LaTeX (latex myawesomepaper) which generates a bunch of citation errors, then run BibTex (bibtex myawesomepaper), and then run LaTeX again (latex myawesomepaper). Actually, you may have to run LaTeX a few times at the end to ensure all the citations are managed properly. Anytime you change the Bibtex file or add a citation to your paper, you'll have to go through these steps again. There are a few other caveats, <a href="http://www2.astro.psu.edu/gradinfo/psuthesis/bibs.html">such as quirks of conference proceedings or changing punctuation separating multiple entries</a>, but it really is as simple as it looks.</p>
+<p>
+James provides a solution for how to include a reference with an excessive number of authors without having it take up an entire page.  <a href="authors.txt">This function</a>  solves a very specific problem when using the BibTex package with LaTex.  Namely, it can help control the number of authors listed for a single paper in the references section.  If you have a 400+ author paper, you probably don't want all 400 of them listed. Depending on the style file you're forced to use in order to get the in-text citations to look the way they need to, you may or may not have built-in options to manipulate the number of authors or the use of 'et al.' in the references section.</p>
+<p>As long as the style file you're using has a function 'format.names' like the one below (the one marked 'original function') you SHOULD (no promises) be able to comment it out and replace it with the modified version.  You can then hardcode in a limit (currently set to 12) after which BibTex will stop writing the author's names and instead use 'et al.'</p>
+</div>
+</div>
+<br clear="all" />
+<table border=0 width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td><img src="images/bottom-cactusbird2.gif" align="left"/></td>
+</tr>
+<tr>
+<td height="30" valign="middle" background="images/goldfill.gif"><div align="center"><a href="index.html" class="menu">About Us</a> | <a href="nmnmsu.html" class="menu"> NM &amp; NMSU</a> | <a href="teachout.html" class="menu">Teaching &amp; Outreach</a> | <a href="compweb.html" class="menu">Computer &amp; Interwebs</a></div></td>
+<td height="30" valign="middle" background="images/goldfill.gif"></td>
+</tr>
+</table>
+</body>
+</html>
